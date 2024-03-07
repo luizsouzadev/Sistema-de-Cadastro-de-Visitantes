@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @secretaria %>
+
+<div>
+  <%= link_to "Editar Secretaria", edit_admin_secretaria_path(@secretaria) %> |
+  <%= link_to "Voltar para todas as Secretarias", admin_secretarias_path %>
+
+  <%= button_to "Excluir Secretaria", admin_secretaria_path(@secretaria), method: :delete %>
+</div>

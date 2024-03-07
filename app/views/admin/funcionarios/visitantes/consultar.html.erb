@@ -1,0 +1,21 @@
+<!-- app/views/visitantes/consultar_visitante.html.erb -->
+<h1>Dados do Visitante</h1>
+<p>Nome: <%= @visitante.nome %></p>
+<p>CPF: <%= @visitante.cpf %></p>
+<p>RG: <%= @visitante.rg %></p>
+
+<%= form_with(model: @visita, url: visitas_registrar_path, method: :post) do |form| %>
+  <div class="field">
+    <%= form.label :setor_id %>
+    <%= form.text_field :setor_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :funcionario_id %>
+    <%= form.text_field :funcionario_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Registrar Visita' %>
+  </div>
+<% end %>

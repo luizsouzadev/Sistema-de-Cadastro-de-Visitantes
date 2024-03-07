@@ -1,0 +1,19 @@
+<!-- app/views/unidades/index.html.erb -->
+<p style="color: green"><%= notice %></p>
+
+<h1>Unidades</h1>
+
+<div id="unidades">
+  <% @unidades.each do |unidade| %>
+    <p><strong>Nome:</strong> <%= unidade.nome %></p>
+    <p><strong>Secretaria:</strong> <%= unidade.secretaria.nome %></p>
+    <p>
+      <%= link_to "Visualizar Unidade", admin_unidade_path(unidade) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Criar nova Unidade", new_admin_unidade_path %>
+<br>
+<br>
+<%= link_to "Voltar para página Inicial", admin_path %>

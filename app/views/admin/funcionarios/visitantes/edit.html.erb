@@ -1,0 +1,11 @@
+<h1>Editar Visitante</h1>
+
+<%= render "form", visitante: @visitante %>
+
+<br>
+
+<div>
+  <%= link_to "Visualizar Visitante", funcionarios_visitante_path(@visitante) %>
+  |
+  <%= link_to "Voltar para todos os Visitantes", funcionarios_visitantes_path %>
+</div>

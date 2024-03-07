@@ -1,0 +1,42 @@
+<h1>Novo Visitante</h1>
+
+<%= form_with(model: [:funcionarios, @visitante], local: true) do |form| %>
+  <!-- Outros campos do formulário -->
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rg %>
+    <%= form.text_field :rg %>
+  </div>
+
+<div class="field">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :foto %>
+    <%= form.file_field :foto %>
+    
+     <% if @visitante.foto.present? %>
+      <p>Imagem atual:</p>
+      <%= image_tag @visitante.foto.url %>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<div>
+  <%= link_to "Voltar para todos os Visitantes", funcionarios_visitantes_path %>
+</div>

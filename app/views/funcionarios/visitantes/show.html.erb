@@ -1,0 +1,23 @@
+<h1>Dados do Visitante</h1>
+
+<p style="color: green"><%= notice %></p>
+
+<p>Nome: <%= @visitante.nome %></p>
+<p>CPF: <%= @visitante.cpf %></p>
+<p>RG: <%= @visitante.rg %></p>
+<p>Telefone: <%= @visitante.telefone %></p>
+
+<div>
+  <strong>Foto:</strong>
+  <%= image_tag @visitante.foto.url, class: 'visitante-photo' if @visitante.foto.present? %>
+</div>
+
+<div>
+  <%= link_to "Editar Visitante", edit_funcionarios_visitante_path(@visitante) %>
+ |
+  <%= link_to "Voltar para todos os Visitantes", funcionarios_visitantes_path %>
+
+
+  <%= button_to "Excluir Visitante", funcionarios_visitante_path(@visitante), method: :delete %>
+
+</div>

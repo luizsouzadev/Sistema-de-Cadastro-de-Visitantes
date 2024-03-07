@@ -1,0 +1,10 @@
+<h1>Editar Funcionário</h1>
+
+<%= render "form", funcionario: @funcionario %>
+
+<br>
+
+<div>
+  <%= link_to "Visualizar Funcionário", admin_funcionario_path(@funcionario) %> |
+  <%= link_to "Voltar para todos os Funcionários", admin_funcionarios_path %>
+</div>

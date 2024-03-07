@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Dados do Funcionário</h1>
+
+<p><strong>Nome:</strong> <%= @funcionario.nome %></p>
+<p><strong>CPF:</strong> <%= @funcionario.cpf %></p>
+<p><strong>RG:</strong> <%= @funcionario.rg %></p>
+<p><strong>Telefone:</strong> <%= @funcionario.telefone %></p>
+<p><strong>Secretaria:</strong> <%= @funcionario.secretaria.nome %></p>
+<p><strong>Unidade:</strong> <%= @funcionario.unidade.nome %></p>
+<p><strong>Setor:</strong> <%= @funcionario.setor.nome %></p>
+<p><strong>Cargo:</strong> <%= @funcionario.cargo.nome %></p>
+
+<div>
+  <%= link_to "Editar esse Funcionário", edit_admin_funcionario_path(@funcionario) %> |
+  <%= link_to "Voltar para todos os Funcionários", admin_funcionarios_path %>
+
+  <%= button_to "Excluir Funcionário", admin_funcionario_path(@funcionario), method: :delete %>
+</div>

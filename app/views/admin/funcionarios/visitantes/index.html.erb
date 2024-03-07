@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Visitantes</h1>
+
+<div id="visitantes">
+  <% @visitantes.each do |visitante| %>
+    <%= render visitante %>
+    <p>
+     <%= link_to "Visualizar Visitante", funcionarios_visitante_path(visitante) %>
+
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Criar novo Visitante", new_funcionarios_visitante_path %>
+
+<br>
+<br>
+<%= link_to "Voltar para página Inicial", root_path %>

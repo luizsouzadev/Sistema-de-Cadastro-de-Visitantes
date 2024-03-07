@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="jumbotron mt-5">
+    <h1 class="display-4">Bem-vindo</h1>
+    <p class="lead">Sistema de Controle de Entrada de Visitantes</p>
+    <hr class="my-4">
+
+    <p>Clique nos links abaixo para acessar outras páginas:</p>
+
+    <div>
+      <%= link_to "Visitantes", funcionarios_visitantes_path, class: "btn btn-primary mr-2" %>
+    </div>
+
+    
+      <div>
+        <%= button_to "Sign Out", destroy_funcionario_session_path, method: :delete, class: "btn btn-danger" %>
+      </div>
+    
+  </div>
+</div>

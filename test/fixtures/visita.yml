@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  visitante: one
+  funcionario: one
+  setor: one
+  data_hora: 2024-01-21 21:57:01
+
+two:
+  visitante: two
+  funcionario: two
+  setor: two
+  data_hora: 2024-01-21 21:57:01

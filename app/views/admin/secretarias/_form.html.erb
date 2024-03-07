@@ -1,0 +1,21 @@
+<%= form_with(model: secretaria, url: secretaria.persisted? ? admin_secretaria_path(secretaria) : admin_secretarias_path, method: secretaria.persisted? ? :patch : :post) do |form| %>
+  <% if secretaria.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(secretaria.errors.count, "error") %> Não foi possível salvar essa Secretaria:</h2>
+      <ul>
+        <% secretaria.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

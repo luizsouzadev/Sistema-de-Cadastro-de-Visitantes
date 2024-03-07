@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Setores</h1>
+
+<div id="setors">
+  <% @setors.each do |setor| %>
+    <p><strong>Nome:</strong> <%= setor.nome %></p>
+    <p><strong>Secretaria:</strong> <%= setor.unidade.nome %></p>
+    <p>
+      <%= link_to "Visualizar Setor", admin_setor_path(setor) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Criar novo Setor", new_admin_setor_path %>
+<br>
+<br>
+<%= link_to "Voltar para página Inicial", admin_path %>

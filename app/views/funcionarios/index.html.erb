@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Funcionários</h1>
+
+<div id="funcionarios">
+  <% @funcionarios.each do |funcionario| %>
+    <%= render funcionario %>
+    <p>
+      <%= link_to "Visualizar Funcionário", admin_funcionario_path(funcionario) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Criar novo Funcionário", new_admin_funcionario_path %>
+<br>
+<br>
+<%= link_to "Voltar para página Inicial", admin_path %>

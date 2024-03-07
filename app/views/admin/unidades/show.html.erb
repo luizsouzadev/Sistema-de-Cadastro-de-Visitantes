@@ -1,0 +1,17 @@
+<!-- app/views/admin/unidades/show.html.erb -->
+<p style="color: green"><%= notice %></p>
+
+<h1>Unidade</h1>
+
+<div id="unidade">
+  <p><strong>Nome:</strong> <%= @unidade.nome %></p>
+  <p><strong>Secretaria:</strong> <%= @unidade.secretaria.nome %></p>
+
+  <div>
+    <%= link_to "Editar essa Unidade", edit_admin_unidade_path(@unidade) %> |
+    <%= link_to "Voltar para todas as Unidades", admin_unidades_path %>
+  </div>
+
+  <%= button_to "Excluir Unidade", admin_unidade_path(@unidade), method: :delete %>
+
+</div>

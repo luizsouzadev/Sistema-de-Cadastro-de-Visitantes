@@ -1,0 +1,11 @@
+<h1>Editar Secretaria</h1>
+
+<%= render "form", secretaria: @secretaria %>
+
+<br>
+
+<div>
+  <%= link_to "Visualizar essa Secretaria", admin_secretaria_path(@secretaria) %>
+  |
+  <%= link_to "Voltar para todas as Secretarias", admin_secretarias_path %>
+</div>

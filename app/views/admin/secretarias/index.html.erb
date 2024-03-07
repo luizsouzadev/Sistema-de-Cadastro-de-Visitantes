@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Secretarias</h1>
+
+<div id="secretarias">
+  <% @secretarias.each do |secretaria| %>
+    <%= render secretaria %>
+    <p>
+  <%= link_to "Visualizar Secretaria", admin_secretaria_path(secretaria) %>
+</p>
+  <% end %>
+</div>
+
+<%= link_to "Criar nova Secretaria", new_admin_secretaria_path %>
+
+<br>
+<br>
+<%= link_to "Voltar para página Inicial", admin_path %>

@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<p><strong>Nome:</strong> <%= @setor.nome %></p>
+<p><strong>Unidade:</strong> <%= @setor.unidade.nome %></p>
+
+<div>
+  <%= link_to "Editar Setor", edit_admin_setor_path(@setor) %> |
+  <%= link_to "Voltar para todos os Setores", admin_setors_path %>
+
+  <%= button_to "Excluir Setor", admin_setor_path(@setor), method: :delete %>
+</div>
